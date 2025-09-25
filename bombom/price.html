@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цены - SoundWave</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Все стили из главной страницы */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        header { background: linear-gradient(135deg, #2c3e50, #1a2530); color: white; padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; }
+        .logo-icon { width: 50px; height: 50px; background: #ff6b6b; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border-radius: 50%; margin-right: 15px; font-size: 20px; }
+.logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+        .logo h1 { font-size: 24px; font-weight: 700; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: white; text-decoration: none; font-size: 16px; font-weight: 500; transition: color 0.3s; padding: 5px 10px; border-radius: 4px; }
+        nav ul li a:hover, nav ul li a.active { color: #ff6b6b; background: rgba(255, 255, 255, 0.1); }
+        .page-header { text-align: center; padding: 40px 0; }
+        .page-header h2 { font-size: 36px; margin-bottom: 15px; color: #2c3e50; }
+        .page-header p { font-size: 18px; color: #7f8c8d; }
+        .price-table { margin: 40px 0; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); overflow: hidden; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #f5f5f5; }
+        th { background: #2c3e50; color: white; font-weight: 600; }
+        tr:hover { background: #f9f9f9; }
+        .category-row { background: #ff6b6b; color: white; }
+        .category-row td { font-weight: 600; padding: 10px 20px; }
+        .price-cell { font-weight: 700; color: #ff6b6b; }
+        .in-stock { color: #27ae60; font-weight: 600; }
+        .limited { color: #f39c12; font-weight: 600; }
+        .out-of-stock { color: #e74c3c; font-weight: 600; }
+        footer { background: #2c3e50; color: #ecf0f1; padding: 50px 0 20px; margin-top: 60px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-section h3 { color: #ff6b6b; font-size: 18px; margin-bottom: 20px; font-weight: 600; position: relative; padding-bottom: 10px; }
+        .footer-section h3:after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background: #ff6b6b; }
+        .footer-section p { margin-bottom: 10px; font-size: 14px; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 10px; }
+        .footer-section ul li a { color: #ecf0f1; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        .footer-section ul li a:hover { color: #ff6b6b; }
+        .footer-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; font-size: 14px; }
+        @media (max-width: 768px) { .header-content { flex-direction: column; } nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; } nav ul li { margin: 5px 10px; } table { font-size: 14px; } th, td { padding: 10px 5px; } .footer-content { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="imago/logo.png" alt="SoundWave" class="logo-image">
+    <h1>SoundWave</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="price.html" class="active">Цены</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="page-header">
+            <h2>Прайс-лист</h2>
+            <p>Актуальные цены на всю продукцию компании</p>
+        </section>
+
+        <section class="price-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Категория</th>
+                        <th>Модель</th>
+                        <th>Характеристики</th>
+                        <th>Цена</th>
+                        <th>Наличие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-row">
+                        <td colspan="5">Гитары</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Акустическая гитара</td>
+                        <td>Yamaha F310</td>
+                        <td>Классическая форма, ель, палисандр</td>
+                        <td class="price-cell">12 990 ₽</td>
+                        <td class="in-stock">В наличии</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Электрогитара</td>
+                        <td>Fender Player Stratocaster</td>
+                        <td>3 сингла, кленовый гриф, 22 лада</td>
+                        <td class="price-cell">64 990 ₽</td>
+                        <td class="in-stock">В наличии</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Бас-гитара</td>
+                        <td>Ibanez GSR200</td>
+                        <td>4 струны, активная электроника</td>
+                        <td class="price-cell">24 990 ₽</td>
+                        <td class="limited">Ограниченно</td>
+                    </tr>
+
+                    <tr class="category-row">
+                        <td colspan="5">Ударные установки</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Барабанная установка</td>
+                        <td>Pearl Export</td>
+                        <td>5-частная, 22" бас-барабан</td>
+                        <td class="price-cell">54 990 ₽</td>
+                        <td class="in-stock">В наличии</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Электронная установка</td>
+                        <td>Roland TD-07KV</td>
+                        <td>Мезоморфная сетка, звуковой модуль</td>
+                        <td class="price-cell">89 990 ₽</td>
+                        <td class="in-stock">В наличии</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Перкуссия</td>
+                        <td>Meinl Marathon Cajon</td>
+                        <td>Деревянный корпус, регулируемые струны</td>
+                        <td class="price-cell">8 990 ₽</td>
+                        <td class="limited">Ограниченно</td>
+                    </tr>
+
+                    <tr class="category-row">
+                        <td colspan="5">Клавишные инструменты</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Цифровое пианино</td>
+                        <td>Yamaha P-125</td>
+                        <td>88 взвешенных клавиш, 2x7Вт</td>
+                        <td class="price-cell">64 990 ₽</td>
+                        <td class="in-stock">В наличии</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Синтезатор</td>
+                        <td>Korg Nautilus 61</td>
+                        <td>61 клавиша, 1200 пресетов</td>
+                        <td class="price-cell">149 990 ₽</td>
+                        <td class="limited">Ограниченно</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>MIDI-контроллер</td>
+                        <td>Novation Launchkey 49</td>
+                        <td>49 клавиш, 16 пэдов, 8 кнопок</td>
+                        <td class="price-cell">24 990 ₽</td>
+                        <td class="in-stock">В наличии</td>
+                    </tr>
+
+                    <tr class="category-row">
+                        <td colspan="5">Аудио оборудование</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Микрофон</td>
+                        <td>Shure SM58</td>
+                        <td>Динамический, кардиоидная направленность</td>
+                        <td class="price-cell">8 990 ₽</td>
+                        <td class="in-stock">В наличии</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Аудиоинтерфейс</td>
+                        <td>Focusrite Scarlett 2i2</td>
+                        <td>2 входа/выхода, 24-bit/192kHz</td>
+                        <td class="price-cell">14 990 ₽</td>
+                        <td class="in-stock">В наличии</td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>Студийные мониторы</td>
+                        <td>Yamaha HS5</td>
+                        <td>5" вуфер, 45Вт, белый шум</td>
+                        <td class="price-cell">24 990 ₽</td>
+                        <td class="out-of-stock">Нет в наличии</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="special-offers" style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin: 40px 0;">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">Специальные предложения</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; text-align: center;">
+                    <h3 style="color: #ff6b6b; margin-bottom: 10px;">Комплект "Начинающий гитарист"</h3>
+                    <p>Акустическая гитара + чехол + медиаторы + камертон</p>
+                    <p style="text-decoration: line-through; color: #7f8c8d;">17 490 ₽</p>
+                    <p style="font-size: 24px; font-weight: bold; color: #ff6b6b;">14 990 ₽</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; text-align: center;">
+                    <h3 style="color: #ff6b6b; margin-bottom: 10px;">Комплект "Домашняя студия"</h3>
+                    <p>Аудиоинтерфейс + микрофон + наушники + кабель</p>
+                    <p style="text-decoration: line-through; color: #7f8c8d;">34 990 ₽</p>
+                    <p style="font-size: 24px; font-weight: bold; color: #ff6b6b;">28 990 ₽</p>
+                </div>
+                <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; text-align: center;">
+                    <h3 style="color: #ff6b6b; margin-bottom: 10px;">Комплект "Электронный музыкант"</h3>
+                    <p>MIDI-контроллер + наушники + ПО + кабель</p>
+                    <p style="text-decoration: line-through; color: #7f8c8d;">39 990 ₽</p>
+                    <p style="font-size: 24px; font-weight: bold; color: #ff6b6b;">32 990 ₽</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О компании</h3>
+                    <p>SoundWave - ведущий поставщик музыкальных инструментов и оборудования с 2005 года.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Зверинецкая ул., 12, Москва</p>
+                    <p><i class="fas fa-phone"></i> +7 (926) 243-05-51</p>
+                    <p><i class="fas fa-envelope"></i> info@soundwave.ru</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 11:00–20:00</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="price.html">Цены</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 SoundWave. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
